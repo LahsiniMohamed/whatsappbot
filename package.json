@@ -1,0 +1,23 @@
+{
+  "name": "testbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "axios": "^0.21.1",
+    "cross-blob": "^3.0.0",
+    "express": "^4.17.1",
+    "form-data": "^4.0.0",
+    "mime-file-extension": "^2.0.6",
+    "mime-types": "^2.1.32",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.14.0"
+  }
+}
