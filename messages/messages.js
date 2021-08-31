@@ -2,6 +2,12 @@ const axios = require('axios');
 const FormData = require('form-data');
 const b64toBlob = require('../utils/functions')
 var mime = require('mime-types')
+const conf = require('dotenv').config()
+
+const port = process.env.PORT || 8080
+
+const path = process.env.PATH || 'document'
+
 const getMessages = async (message)=>{
 
     const {from , id, author, type} = message
@@ -63,7 +69,7 @@ const getMessages = async (message)=>{
             console.log('finished making file', media.filename,savePath)
             axios({
                 method: "post",
-                url: "http://localhost:8080/document",
+                url: `http://localhost:8080/document`,
                 data: data,
                 headers: { 
                   'Content-Type': 'application/json'
